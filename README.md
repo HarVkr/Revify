@@ -1,6 +1,6 @@
 # Revify: Agentic Customer Review Analysis
 
-Revify is an advanced, agentic-architecture-powered project that automates the analysis of customer reviews using a multi-agent system built atop [crewAI](https://crewai.com). Designed for flexibility and extensibility, Revify enables deep, feature-based sentiment analysis, efficient review scraping, and collaborative research generation, all orchestrated through autonomous, specialized AI agents.
+Revify is an advanced, agentic-architecture-powered project that automates the analysis of customer reviews using a multi-agent system built atop [crewAI](https://crewai.com). Designed for flexibility and extensibility, Revify enables deep, feature-based sentiment analysis, efficient review acquisition, and collaborative research generation, all orchestrated through autonomous, specialized AI agents.
 
 [Watch the Product Demonstration here](https://drive.google.com/file/d/1m4HlyzCs6mY4uu5VbJQ0S1P5LeJ-EMai/view?usp=sharing)
 
@@ -22,7 +22,7 @@ Revify is an advanced, agentic-architecture-powered project that automates the a
 ## Features
 
 - **Multi-Agent AI Workflow**: Employs autonomous agents for orchestrated review scraping, feature extraction, and analysis.
-- **Amazon Review Scraping**: Automated extraction of customer reviews from Amazon product pages, with robust CSV export.
+- **Review Acquisition using Apify**: Automated extraction of customer reviews from Amazon product pages and persistence in the Supabase DB.
 - **Feature Extraction**: Identifies and extracts key product features from reviews (e.g., Comfort, Durability, Battery Life, etc.).
 - **Sentiment Analysis & Reporting**: Structured output of feature-based sentiment and insights, ready for research or product evaluation.
 - **Extensible CrewAI Framework**: Easily add, configure, and coordinate agents for new domains or research tasks.
@@ -34,9 +34,6 @@ Revify is an advanced, agentic-architecture-powered project that automates the a
 
 Revify utilizes an agentic paradigm via CrewAI, where each agent fulfills a specialized role:
 
-- **Review Scraper Agent**
-  - Scrapes reviews from Amazon using Selenium and BeautifulSoup.
-  - Saves structured data (title, text, rating, etc.) to CSV.
 - **Feature Extraction Agent**
   - Analyzes review texts to extract salient product features.
   - Supports JSON-based output for downstream analysis.
@@ -102,7 +99,6 @@ This command initializes the agent crew, triggering the full pipeline from revie
 - **Python Ecosystem:**  
   - Data: pandas, numpy
   - AI: langchain, pydantic, langgraph, openai
-  - Web Scraping: selenium, beautifulsoup4
 - **Logging & Debugging:** Python logging, tracebacks
 - **Configuration:** YAML, dotenv
 - **Other:** Google Cloud, Matplotlib, OpenCV (for future extensibility)
